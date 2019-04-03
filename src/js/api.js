@@ -1,11 +1,12 @@
 const baseURL = 'https://api.surveymonkey.com/';
+const token = 'eaP1DmlrVqcdtnhOS8cse2zJAOtJvs0VAuXxoduo5Oq7Do7L0N2n6-.TcfRybkyIYn5dY82g.MYMiniJ8Vgj8dyMPUcP-.E-DBRCzKBy1tm29boii.U4toRJX0-yu887';
 
-async function getListaPesquisas() {
+function getListaPesquisas() {
     let url = baseURL + 'v3/surveys'
     let req = {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer eaP1DmlrVqcdtnhOS8cse2zJAOtJvs0VAuXxoduo5Oq7Do7L0N2n6-.TcfRybkyIYn5dY82g.MYMiniJ8Vgj8dyMPUcP-.E-DBRCzKBy1tm29boii.U4toRJX0-yu887'
+            'Authorization': 'Bearer ' + token,
         },
         mode: 'cors',
     };

@@ -63,12 +63,18 @@
   </div>
 
   <script>
-    var resultado = await getListaPesquisas();
-    console.log(resultado);
-    // Promise.resolve(getListaPesquisas())
-    // .then(function(valor){
-    //   console.log(valor.data);
-    // });
+    let lista = document.getElementById("lista");
+    Promise.resolve(getListaPesquisas())
+    .then((valor) => {
+      valor.data.forEach(element => {
+        let linha = document.createElement("li");
+        let link = document.createElement("a");
+        link.innerText = element.title;
+        link.href = "src/views/resumoPesquisa.html";
+        linha.appendChild(link);
+        lista.appendChild(linha);
+      });
+    });
   </script>
 
   <script>
