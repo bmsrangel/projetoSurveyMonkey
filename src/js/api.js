@@ -1,19 +1,15 @@
 const baseURL = 'https://api.surveymonkey.com/';
 
-let h = new Headers();
-h.append('Authorization', 'Bearer eaP1DmlrVqcdtnhOS8cse2zJAOtJvs0VAuXxoduo5Oq7Do7L0N2n6-.TcfRybkyIYn5dY82g.MYMiniJ8Vgj8dyMPUcP-.E-DBRCzKBy1tm29boii.U4toRJX0-yu887')
-h.append('Content-Type', 'application/json');
-
-function getListaPesquisas(){
+async function getListaPesquisas() {
     let url = baseURL + 'v3/surveys'
     let req = {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer eaP1DmlrVqcdtnhOS8cse2zJAOtJvs0VAuXxoduo5Oq7Do7L0N2n6-.TcfRybkyIYn5dY82g.MYMiniJ8Vgj8dyMPUcP-.E-DBRCzKBy1tm29boii.U4toRJX0-yu887'
         },
-        mode: 'cors'
+        mode: 'cors',
     };
-    return $.ajax(url, req);
+    return $.ajax(url, req)
 }
 
 // async function getListaPesquisas() {

@@ -63,16 +63,12 @@
   </div>
 
   <script>
-    let lista = document.getElementById("lista");
-    let item = document.createElement("li");
-    let link = document.createElement("a");
-    link.href = "src/views/resumoPesquisa.html";
-    link.innerText = "teste";
-    item.appendChild(link);
-    lista.appendChild(item);
-    var resposta = getListaPesquisas();
-    console.log(resposta);
-    
+    var resultado = await getListaPesquisas();
+    console.log(resultado);
+    // Promise.resolve(getListaPesquisas())
+    // .then(function(valor){
+    //   console.log(valor.data);
+    // });
   </script>
 
   <script>
