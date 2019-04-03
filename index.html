@@ -70,7 +70,7 @@
         let linha = document.createElement("li");
         let link = document.createElement("a");
         link.innerText = element.title;
-        link.href = "src/views/resumoPesquisa.html";
+        link.href = "src/views/resumoPesquisa.html?id=" + String(element.id);
         linha.appendChild(link);
         lista.appendChild(linha);
       });
